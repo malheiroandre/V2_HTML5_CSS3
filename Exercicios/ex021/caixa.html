@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+</head>
+<style>
+    h1{
+        background-color: lightgrey;
+        height: 300px;
+        width: 300px;
+
+        border-width: 10px;
+        border-style: solid;
+        border-color: darkgreen;
+        /*Em Formato ShortHand Fica do seguinte modo:*/
+        border: 10px solid darkgreen;
+
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        /*Em Formato ShortHand fica como se pode ver a baixo,
+        as medidas seguem o sentido horário começando pelo
+        top-right-bottom-left*/
+        padding: 10px 10px 10px 10px;
+
+        margin-top: 10 px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        /*ShorHand para a margin.
+        Para este caso foi aplicado auto em Right e Left
+        isto vai implicar que a Margin esteja sempre centralizado
+        na página*/
+        margin: 20px auto 40px auto;
+
+        outline-width: 5px;
+        outline-style: dashed;
+        outline-color: black;
+        
+    }
+    a{
+        display: inline-block;
+        border-width: 5px;
+        border-style: solid;
+        border-color: red;
+    }
+</style>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>
+        Páragrafos também são exemplos de box-level, 
+        mas os <a href="#">mas os links são exemplos de 
+            de caixas inline-level</a>. Vamos viewport
+            como tudo isso funciona.</p>
+</body>
+</html>

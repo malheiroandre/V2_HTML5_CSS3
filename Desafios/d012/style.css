@@ -1,0 +1,70 @@
+@charset "UTF-8"
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+:root {
+    --font0: 'Passion One', cursive;
+    --font1: 'Dancing Script', cursive;
+    --font2: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+html, body{
+    min-height: 100hv;
+    background-color: darkgrey;
+    font-family: var(--font2);
+    
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 100px;
+    padding: 50px 10px 10px 10px;
+    
+    
+    
+}
+header h1{
+    padding: 0px 10px 20px 10px;
+    font-family: var(--font0);
+    font-size: 2.5em;
+    font-variant: small-caps;
+}
+header > p {
+    padding-bottom: 50px;
+    font-family: var(--font1);
+}
+
+
+
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--font1);
+    font-size: 3.5vw;
+}
+
+section.normal{
+    background-color: rgba(0, 0, 0, 0.266);
+    color: rgb(255, 255, 255);
+}
+section.imagem{
+    background-color: rgb(81, 79, 79);
+    color: white;
+
+}
+section.imagem > p {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.278);
+    padding: 10px;
+}

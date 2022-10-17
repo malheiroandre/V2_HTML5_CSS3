@@ -4,53 +4,248 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabelas em HTML5</title>
+    <title>Uso de tabelas Grandes</title>
     <style>
-        table {
-            border: 2px solid black;
-            width: 400px ;
-            height: 100px;
-           
-            border-collapse: collapse;
+        body{
+            font-family: Arial, Helvetica, sans-serif;
 
+        }
+        table{
+            width: 500px;
             
+
         }
-        tr.linha{
-            background-color: grey;
+        thead, tfoot{
+            background-color: gray;
+
         }
-        td.dado{
-            background-color: yellow;
-        }
-        td{
-            border: 2px solid black;
+        th, td{
+            border: 1px solid black;
             text-align: center;
-            border-radius: 6px;
-            padding: 0px;
-            margin: 0px;
-            text-align: center; /*Alinhamento Horizontal*/
-            vertical-align: middle; /*Alinhamento Vertical*/
+        }
+        caption{
+            background-color: grey;
+            font-size: 1.2em;
+            color: white;
+        }
+        tbody > tr:nth-child(odd){ /*OU 2n -1*/
+            background-color: white;
+
+        }
+        tbody > tr:nth-child(even){ /*OU 2n*/
+            background-color: rgba(128, 128, 128, 0.359);
+
+        }
+        thead > tr > th{
+            position: sticky;
+            top: 0;
+            background-color: gray;
         }
     </style>
 </head>
 <body>
-    <h1>Tabelas</h1>
+    <h1>Uso de tabelas grandes </h1>
+    <h2>População pelos diferentes munícipios de Portugal</h2>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES 
+        table
+            thead
+                tr, td, th
+            tbody
+                tr, td, th
+            tfoot
+                tr, td, th
+
+    -->
+
     <table>
-        <tr class="linha">
-            <td>A1</td>
-            <td>B1</td>
-            <td>C1</td>
+        <caption>
+            População de Portugal pelos diferentes Paises
+        </caption>
+        <thead>
+            <tr>
+                
+                <th scope="col">Munícipio</th>
+                <th scope="col" style="width: 200px;">População</th>
+                    
+            </tr>
+        </thead>
             
-        </tr>
-        <tr>
-            <td class="dado">A2</td>
-            <td>B2</td>
-            <td>C2</td>
-        </tr>
-        <tr>
-            <td>A3</td>
-            <td>B3</td>
-            <td>C3</td>
-        </tr>
+
+        <tbody>
+            <tr>
+                <td>Lisboa</td>
+                <td>544 851</td>
+            </tr>
+            <tr>
+                <td>Sintra</td>
+                <td>385 954</td>
+            </tr>
+            <tr>
+                <td>Vila Nova de Gaia</td>
+                <td>304 149</td>
+            </tr>
+            <tr>
+                <td>Porto</td>
+                <td>231 962</td>
+            </tr>
+            <tr>
+                <td>Cascais</td>
+                <td>214 134</td>
+            </tr>
+            <tr>
+                <td>Loures</td>
+                <td>201 646</td>
+            </tr>
+            <tr>
+                <td>Braga</td>
+                <td>193 333</td>
+            </tr>
+            <tr>
+                <td>Almada</td>
+                <td>177 400</td>
+            </tr>
+            <tr>
+                <td>Matosinhos</td>
+                <td>172 669</td>
+            </tr>
+            <tr>
+                <td>Lisboa</td>
+                <td>544 851</td>
+            </tr>
+            <tr>
+                <td>Sintra</td>
+                <td>385 954</td>
+            </tr>
+            <tr>
+                <td>Vila Nova de Gaia</td>
+                <td>304 149</td>
+            </tr>
+            <tr>
+                <td>Porto</td>
+                <td>231 962</td>
+            </tr>
+            <tr>
+                <td>Cascais</td>
+                <td>214 134</td>
+            </tr>
+            <tr>
+                <td>Loures</td>
+                <td>201 646</td>
+            </tr>
+            <tr>
+                <td>Braga</td>
+                <td>193 333</td>
+            </tr>
+            <tr>
+                <td>Almada</td>
+                <td>177 400</td>
+            </tr>
+            <tr>
+                <td>Matosinhos</td>
+                <td>172 669</td>
+            </tr>
+            <tr>
+                <td>Lisboa</td>
+                <td>544 851</td>
+            </tr>
+            <tr>
+                <td>Sintra</td>
+                <td>385 954</td>
+            </tr>
+            <tr>
+                <td>Vila Nova de Gaia</td>
+                <td>304 149</td>
+            </tr>
+            <tr>
+                <td>Porto</td>
+                <td>231 962</td>
+            </tr>
+            <tr>
+                <td>Cascais</td>
+                <td>214 134</td>
+            </tr>
+            <tr>
+                <td>Loures</td>
+                <td>201 646</td>
+            </tr>
+            <tr>
+                <td>Braga</td>
+                <td>193 333</td>
+            </tr>
+            <tr>
+                <td>Almada</td>
+                <td>177 400</td>
+            </tr>
+            <tr>
+                <td>Matosinhos</td>
+                <td>172 669</td>
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td scope="row">Total</td>
+                <td>000 000 000</td>
+            </tr>
+
+        </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae nisi et tempora molestias nesciunt explicabo ab unde in architecto. Soluta repellat velit perferendis quidem quod error odit veniam blanditiis ipsa.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quisquam quia laboriosam pariatur sit quod est libero unde ratione tenetur molestiae accusamus reprehenderit minus, saepe numquam id ex ipsa. Delectus!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ullam possimus nesciunt laboriosam recusandae? Quisquam ex nemo sunt accusantium inventore vel voluptates nihil ipsum, fugit sed quia et ipsa totam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sunt tempore optio ratione mollitia voluptas incidunt consequatur esse eveniet enim omnis rerum, doloremque itaque eos? Assumenda deserunt earum id magni.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem repellendus sunt placeat nobis eaque dolores sapiente totam minima, eius eos expedita, delectus unde quod culpa velit harum. Doloribus, delectus dolorem!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic possimus dolore numquam aliquid laudantium dicta libero, id tempora dolorum, fugit veritatis, debitis neque nihil temporibus obcaecati. Ex adipisci culpa cum.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolor, sed dolore dolorum odit, corrupti minima iste, omnis velit voluptatibus soluta ipsum culpa laboriosam eum fugiat minus vel eaque quisquam?
+
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae nisi et tempora molestias nesciunt explicabo ab unde in architecto. Soluta repellat velit perferendis quidem quod error odit veniam blanditiis ipsa.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quisquam quia laboriosam pariatur sit quod est libero unde ratione tenetur molestiae accusamus reprehenderit minus, saepe numquam id ex ipsa. Delectus!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ullam possimus nesciunt laboriosam recusandae? Quisquam ex nemo sunt accusantium inventore vel voluptates nihil ipsum, fugit sed quia et ipsa totam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sunt tempore optio ratione mollitia voluptas incidunt consequatur esse eveniet enim omnis rerum, doloremque itaque eos? Assumenda deserunt earum id magni.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem repellendus sunt placeat nobis eaque dolores sapiente totam minima, eius eos expedita, delectus unde quod culpa velit harum. Doloribus, delectus dolorem!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic possimus dolore numquam aliquid laudantium dicta libero, id tempora dolorum, fugit veritatis, debitis neque nihil temporibus obcaecati. Ex adipisci culpa cum.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolor, sed dolore dolorum odit, corrupti minima iste, omnis velit voluptatibus soluta ipsum culpa laboriosam eum fugiat minus vel eaque quisquam?
+        
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae nisi et tempora molestias nesciunt explicabo ab unde in architecto. Soluta repellat velit perferendis quidem quod error odit veniam blanditiis ipsa.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quisquam quia laboriosam pariatur sit quod est libero unde ratione tenetur molestiae accusamus reprehenderit minus, saepe numquam id ex ipsa. Delectus!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ullam possimus nesciunt laboriosam recusandae? Quisquam ex nemo sunt accusantium inventore vel voluptates nihil ipsum, fugit sed quia et ipsa totam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sunt tempore optio ratione mollitia voluptas incidunt consequatur esse eveniet enim omnis rerum, doloremque itaque eos? Assumenda deserunt earum id magni.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem repellendus sunt placeat nobis eaque dolores sapiente totam minima, eius eos expedita, delectus unde quod culpa velit harum. Doloribus, delectus dolorem!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic possimus dolore numquam aliquid laudantium dicta libero, id tempora dolorum, fugit veritatis, debitis neque nihil temporibus obcaecati. Ex adipisci culpa cum.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolor, sed dolore dolorum odit, corrupti minima iste, omnis velit voluptatibus soluta ipsum culpa laboriosam eum fugiat minus vel eaque quisquam?
+        
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae nisi et tempora molestias nesciunt explicabo ab unde in architecto. Soluta repellat velit perferendis quidem quod error odit veniam blanditiis ipsa.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quisquam quia laboriosam pariatur sit quod est libero unde ratione tenetur molestiae accusamus reprehenderit minus, saepe numquam id ex ipsa. Delectus!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ullam possimus nesciunt laboriosam recusandae? Quisquam ex nemo sunt accusantium inventore vel voluptates nihil ipsum, fugit sed quia et ipsa totam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sunt tempore optio ratione mollitia voluptas incidunt consequatur esse eveniet enim omnis rerum, doloremque itaque eos? Assumenda deserunt earum id magni.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem repellendus sunt placeat nobis eaque dolores sapiente totam minima, eius eos expedita, delectus unde quod culpa velit harum. Doloribus, delectus dolorem!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic possimus dolore numquam aliquid laudantium dicta libero, id tempora dolorum, fugit veritatis, debitis neque nihil temporibus obcaecati. Ex adipisci culpa cum.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolor, sed dolore dolorum odit, corrupti minima iste, omnis velit voluptatibus soluta ipsum culpa laboriosam eum fugiat minus vel eaque quisquam?
+        
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae nisi et tempora molestias nesciunt explicabo ab unde in architecto. Soluta repellat velit perferendis quidem quod error odit veniam blanditiis ipsa.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quisquam quia laboriosam pariatur sit quod est libero unde ratione tenetur molestiae accusamus reprehenderit minus, saepe numquam id ex ipsa. Delectus!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ullam possimus nesciunt laboriosam recusandae? Quisquam ex nemo sunt accusantium inventore vel voluptates nihil ipsum, fugit sed quia et ipsa totam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sunt tempore optio ratione mollitia voluptas incidunt consequatur esse eveniet enim omnis rerum, doloremque itaque eos? Assumenda deserunt earum id magni.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem repellendus sunt placeat nobis eaque dolores sapiente totam minima, eius eos expedita, delectus unde quod culpa velit harum. Doloribus, delectus dolorem!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic possimus dolore numquam aliquid laudantium dicta libero, id tempora dolorum, fugit veritatis, debitis neque nihil temporibus obcaecati. Ex adipisci culpa cum.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolor, sed dolore dolorum odit, corrupti minima iste, omnis velit voluptatibus soluta ipsum culpa laboriosam eum fugiat minus vel eaque quisquam?
+        
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae nisi et tempora molestias nesciunt explicabo ab unde in architecto. Soluta repellat velit perferendis quidem quod error odit veniam blanditiis ipsa.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quisquam quia laboriosam pariatur sit quod est libero unde ratione tenetur molestiae accusamus reprehenderit minus, saepe numquam id ex ipsa. Delectus!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ullam possimus nesciunt laboriosam recusandae? Quisquam ex nemo sunt accusantium inventore vel voluptates nihil ipsum, fugit sed quia et ipsa totam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sunt tempore optio ratione mollitia voluptas incidunt consequatur esse eveniet enim omnis rerum, doloremque itaque eos? Assumenda deserunt earum id magni.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem repellendus sunt placeat nobis eaque dolores sapiente totam minima, eius eos expedita, delectus unde quod culpa velit harum. Doloribus, delectus dolorem!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic possimus dolore numquam aliquid laudantium dicta libero, id tempora dolorum, fugit veritatis, debitis neque nihil temporibus obcaecati. Ex adipisci culpa cum.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolor, sed dolore dolorum odit, corrupti minima iste, omnis velit voluptatibus soluta ipsum culpa laboriosam eum fugiat minus vel eaque quisquam?
+        
+    </p>
+    
 </body>
 </html>
